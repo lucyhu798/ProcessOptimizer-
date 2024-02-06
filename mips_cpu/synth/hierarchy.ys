@@ -1,0 +1,5 @@
+read_verilog mips_core.v
+blackbox sram
+hierarchy -top mips_core
+proc
+write_json hierarchy.json

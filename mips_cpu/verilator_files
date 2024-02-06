@@ -1,0 +1,17 @@
+mips_core/mips_core_pkg.sv
+mips_core/memory_interfaces.sv
+mips_core/mips_core_interfaces.sv
+mips_core/alu.sv
+mips_core/d_cache.sv
+mips_core/forward_unit.sv
+mips_core/i_cache.sv
+mips_core/branch_controller.sv
+mips_core/decoder.sv
+mips_core/glue_circuits.sv
+mips_core/pipeline_registers.sv
+mips_core/cache_bank.sv
+mips_core/fetch_unit.sv
+mips_core/hazard_controller.sv
+mips_core/reg_file.sv
+mips_core/memory_arbiter.sv
+mips_core/mips_core.sv

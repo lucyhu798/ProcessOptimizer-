@@ -1,0 +1,196 @@
+@200
+-IF Stage
+@28
+TOP.mips_core.clk
+TOP.mips_core.rst_n
+[color] 1
+TOP.mips_core.i2i_hc.stall
+@22
+[color] 5
+TOP.mips_core.if_pc_current.pc[25:0]
+[color] 5
+TOP.mips_core.if_pc_next.pc[25:0]
+@28
+TOP.mips_core.if_i_cache_output.valid
+@22
+TOP.mips_core.if_i_cache_output.data[31:0]
+@200
+-IF to DEC
+@28
+[color] 1
+TOP.mips_core.i2d_hc.flush
+[color] 1
+TOP.mips_core.i2d_hc.stall
+@200
+-DEC Stage
+@28
+TOP.mips_core.clk
+@22
+[color] 5
+TOP.mips_core.i2d_pc.pc[25:0]
+@28
+TOP.mips_core.i2d_inst.valid
+@22
+TOP.mips_core.i2d_inst.data[31:0]
+@200
+-
+@28
+TOP.mips_core.dec_decoder_output.valid
+@100000028
+TOP.mips_core.dec_decoder_output.alu_ctl[4:0]
+@28
+TOP.mips_core.dec_decoder_output.is_branch_jump
+TOP.mips_core.dec_decoder_output.is_jump
+TOP.mips_core.dec_decoder_output.is_jump_reg
+@22
+TOP.mips_core.dec_decoder_output.branch_target[25:0]
+@28
+TOP.mips_core.dec_decoder_output.is_mem_access
+TOP.mips_core.dec_decoder_output.mem_action
+TOP.mips_core.dec_decoder_output.uses_rs
+@24
+TOP.mips_core.dec_decoder_output.rs_addr[4:0]
+@28
+TOP.mips_core.dec_decoder_output.uses_rt
+@24
+TOP.mips_core.dec_decoder_output.rt_addr[4:0]
+@28
+TOP.mips_core.dec_decoder_output.uses_immediate
+@22
+TOP.mips_core.dec_decoder_output.immediate[31:0]
+@28
+TOP.mips_core.dec_decoder_output.uses_rw
+@24
+TOP.mips_core.dec_decoder_output.rw_addr[4:0]
+@200
+-
+@28
+TOP.mips_core.DEC_STAGE_GLUE.branch_decoded.valid
+TOP.mips_core.DEC_STAGE_GLUE.branch_decoded.is_jump
+TOP.mips_core.DEC_STAGE_GLUE.branch_decoded.prediction
+@22
+TOP.mips_core.DEC_STAGE_GLUE.branch_decoded.target[25:0]
+TOP.mips_core.DEC_STAGE_GLUE.branch_decoded.recovery_target[25:0]
+@200
+-
+@c00200
+-regs
+@22
+TOP.mips_core.REG_FILE.regs[0][31:0]
+TOP.mips_core.REG_FILE.regs[1][31:0]
+TOP.mips_core.REG_FILE.regs[2][31:0]
+TOP.mips_core.REG_FILE.regs[3][31:0]
+TOP.mips_core.REG_FILE.regs[4][31:0]
+TOP.mips_core.REG_FILE.regs[5][31:0]
+TOP.mips_core.REG_FILE.regs[6][31:0]
+TOP.mips_core.REG_FILE.regs[7][31:0]
+TOP.mips_core.REG_FILE.regs[8][31:0]
+TOP.mips_core.REG_FILE.regs[9][31:0]
+TOP.mips_core.REG_FILE.regs[10][31:0]
+TOP.mips_core.REG_FILE.regs[11][31:0]
+TOP.mips_core.REG_FILE.regs[12][31:0]
+TOP.mips_core.REG_FILE.regs[13][31:0]
+TOP.mips_core.REG_FILE.regs[14][31:0]
+TOP.mips_core.REG_FILE.regs[15][31:0]
+TOP.mips_core.REG_FILE.regs[16][31:0]
+TOP.mips_core.REG_FILE.regs[17][31:0]
+TOP.mips_core.REG_FILE.regs[18][31:0]
+TOP.mips_core.REG_FILE.regs[19][31:0]
+TOP.mips_core.REG_FILE.regs[20][31:0]
+TOP.mips_core.REG_FILE.regs[21][31:0]
+TOP.mips_core.REG_FILE.regs[22][31:0]
+TOP.mips_core.REG_FILE.regs[23][31:0]
+TOP.mips_core.REG_FILE.regs[24][31:0]
+TOP.mips_core.REG_FILE.regs[25][31:0]
+TOP.mips_core.REG_FILE.regs[26][31:0]
+TOP.mips_core.REG_FILE.regs[27][31:0]
+TOP.mips_core.REG_FILE.regs[28][31:0]
+TOP.mips_core.REG_FILE.regs[29][31:0]
+TOP.mips_core.REG_FILE.regs[30][31:0]
+TOP.mips_core.REG_FILE.regs[31][31:0]
+@1401200
+-regs
+@28
+TOP.mips_core.DEC_STAGE_GLUE.o_alu_input.valid
+@100000028
+TOP.mips_core.DEC_STAGE_GLUE.o_alu_input.alu_ctl[4:0]
+@22
+TOP.mips_core.DEC_STAGE_GLUE.o_alu_input.op1[31:0]
+TOP.mips_core.DEC_STAGE_GLUE.o_alu_input.op2[31:0]
+@200
+-DEC to EX
+@28
+[color] 1
+TOP.mips_core.d2e_hc.flush
+[color] 1
+TOP.mips_core.d2e_hc.stall
+@200
+-EX Stage
+@28
+TOP.mips_core.clk
+@22
+[color] 5
+TOP.mips_core.d2e_pc.pc[25:0]
+@28
+TOP.mips_core.ex_alu_output.valid
+@22
+TOP.mips_core.ex_alu_output.result[31:0]
+@28
+TOP.mips_core.ex_alu_output.branch_outcome
+@200
+-
+@28
+TOP.mips_core.EX_STAGE_GLUE.o_branch_result.valid
+TOP.mips_core.EX_STAGE_GLUE.o_branch_result.prediction
+TOP.mips_core.EX_STAGE_GLUE.o_branch_result.outcome
+@22
+TOP.mips_core.EX_STAGE_GLUE.o_branch_result.recovery_target[25:0]
+@28
+TOP.mips_core.EX_STAGE_GLUE.o_d_cache_input.valid
+TOP.mips_core.EX_STAGE_GLUE.o_d_cache_input.mem_action
+@22
+TOP.mips_core.EX_STAGE_GLUE.o_d_cache_input.addr[25:0]
+TOP.mips_core.EX_STAGE_GLUE.o_d_cache_input.addr_next[25:0]
+TOP.mips_core.EX_STAGE_GLUE.o_d_cache_input.data[31:0]
+@200
+-EX to MEM
+@28
+[color] 1
+TOP.mips_core.e2m_hc.flush
+[color] 1
+TOP.mips_core.e2m_hc.stall
+@200
+-MEM Stage
+@28
+TOP.mips_core.clk
+@22
+[color] 5
+TOP.mips_core.e2m_pc.pc[25:0]
+@28
+TOP.mips_core.mem_d_cache_output.valid
+@22
+TOP.mips_core.mem_d_cache_output.data[31:0]
+@200
+-MEM to WB
+@28
+[color] 1
+TOP.mips_core.m2w_hc.flush
+[color] 1
+TOP.mips_core.m2w_hc.stall
+@200
+-WB Stage
+@28
+TOP.mips_core.clk
+TOP.mips_core.m2w_write_back.uses_rw
+@22
+TOP.mips_core.m2w_write_back.rw_addr[4:0]
+TOP.mips_core.m2w_write_back.rw_data[31:0]
+@200
+-Hazards
+@28
+TOP.mips_core.HAZARD_CONTROLLER.lw_hazard
+TOP.mips_core.HAZARD_CONTROLLER.ic_miss
+TOP.mips_core.HAZARD_CONTROLLER.ds_miss
+TOP.mips_core.HAZARD_CONTROLLER.dec_overload
+TOP.mips_core.HAZARD_CONTROLLER.ex_overload
+TOP.mips_core.HAZARD_CONTROLLER.dc_miss
